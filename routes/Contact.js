@@ -39,7 +39,7 @@ router.post("/contact/send",async (req, res) => {
         }
         console.log("Email sent to: " + info.response);
     })
-    res.send(newContact);
+    res.send("Complete");
 })
 
 module.exports = router;
