@@ -6,7 +6,7 @@ const InformationModel = require("../models/Information");
 const nodemailer = require('nodemailer');
 const cors = require("cors");
 
-router.post("/information/send", cors({origin: "*", methods: ['POST']}) ,async (req, res) => {
+router.post("/information/send",async (req, res) => {
     const newInfo = new InformationModel({
         email: req.body.email,
         date: Date.now()
