@@ -22,7 +22,7 @@ router.post("/information/send",async (req, res) => {
 
     let mailOptions = {
         from: process.env.EMAIL,
-        to: newContact.email,
+        to: newInfo.email,
         subject: "D&D Companion Contact Mail",
         html: `
             <h1>Bienvenido a D&amp;D Companion</h1>
