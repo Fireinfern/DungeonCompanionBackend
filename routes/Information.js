@@ -38,4 +38,6 @@ router.post("/information/send", async (req, res) => {
         console.log("Email sent to: " + info.response);
     })
     res.send(newInfo);
-})
+});
+
+module.exports = router;
