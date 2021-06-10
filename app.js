@@ -12,7 +12,7 @@ mongoose
     .connect(process.env.MONGODB, { useNewUrlParser: true })
     .then(() => {
         const app = express();
-        app.use(cors());
+        //app.use(cors());
         app.use(express.json());
         app.use('', Contact);
         app.use('', Information);
