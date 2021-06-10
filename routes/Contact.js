@@ -4,8 +4,9 @@ const express = require("express");
 const router = express.Router();
 const ContactModel = require("../models/Contact");
 const nodemailer = require('nodemailer');
+const cors = require('cors')
 
-router.post("/contact/send", async (req, res) => {
+router.post("/contact/send", cors() ,async (req, res) => {
     const newContact = new ContactModel({
         email: req.body.email,
         subject: req.body.subject,
